@@ -20,17 +20,15 @@ platform :android do
      end
   end
 
-
   desc "Deploy beta version to Google Play"
-  lane :playstore do
-    gradle(
-        task: "assemble",
-        build_type: "Release",
-
-       )
+  lane : playstore do
+    sh "flutter build apk v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
     upload_to_play_store(
-        version_name: "1.1.0",
-        version_code: 3,
-        )
-     end
+        track: 'beta',
+        apk: '../build/app/outputs/flutter-apk/app-release.apk'
+        }
+      end
+
+
+
 
