@@ -22,7 +22,7 @@ platform :android do
 
   desc "Deploy beta version to Google Play"
   lane :playstore do
-    sh "flutter build apk v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
+    sh "flutter build apk -v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
     upload_to_play_store(
         track: 'beta',
         apk: '../build/app/outputs/flutter-apk/app-release.apk'
