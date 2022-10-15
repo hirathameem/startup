@@ -34,5 +34,3 @@ platform :android do
         )
      end
 
-
-
