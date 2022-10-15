@@ -13,17 +13,6 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### playstore
-
-```sh
-[bundle exec] fastlane playstore
-```
-
-Deploy beta vwrsion to Google Play
-
-----
-
-
 ## Android
 
 ### android test
@@ -41,6 +30,14 @@ Runs all the tests
 ```
 
 Submit new beta build for testing
+
+### android deploy
+
+```sh
+[bundle exec] fastlane android deploy
+```
+
+Deploy alpha version to Google Play
 
 ----
 
