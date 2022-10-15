@@ -18,18 +18,15 @@ platform :android do
           android_artifact_path: '../build/app/outputs/flutter-apk/app-release.apk'
         )
      end
+
+  desc "Deploy a new version to the Google Play"
+    lane :deploy do
+      gradle(task: "clean assembleRelease")
+      upload_to_play_store
+    end
   end
 
-  desc "Deploy alpha version to Google Play"
-  lane :playstore do
-    sh "flutter build appbundle -v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
-    upload_to_play_store(
-        package_name: 'com.nathira.startup',
-        track: 'alpha',
-        aab: '../build/app/outputs/bundle/release/app-release.aab',
-        json_key: "./api-play-store-key.json"
-        )
-      end
+
 
 
 
