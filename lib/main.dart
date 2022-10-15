@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generatorsss',
+      title: 'Startup Name Generatorss',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Startup Name Generatorsss'),
+          title: const Text('Startup Name Generatorss'),
         ),
         body: const Center(
           child: RandomWords(),
