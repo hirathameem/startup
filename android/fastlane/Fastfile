@@ -27,7 +27,7 @@ platform :android do
         package_name: 'com.nathira.startup',
         track: 'alpha',
         aab: '../build/app/outputs/bundle/release/app-release.aab',
-        json_key: 'pc-api-7972865370940927060-381-42125e02e8f7.json'
+        json_key: "./api-play-store-key.json"
         )
       end
 
