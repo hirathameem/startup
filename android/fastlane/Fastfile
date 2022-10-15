@@ -20,12 +20,14 @@ platform :android do
      end
   end
 
-  desc "Deploy beta version to Google Play"
+  desc "Deploy alpha version to Google Play"
   lane :playstore do
-    sh "flutter build apk -v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
+    sh "flutter build appbundle -v --build-number #{ENV['GITVERSION_BUILDMETADATA']} --build-name #{ENV['GITVERSION_MAJORMINORPATCH']}"
     upload_to_play_store(
-        track: 'beta',
-        apk: '../build/app/outputs/flutter-apk/app-release.apk'
+        package_name: 'com.nathira.startup',
+        track: 'alpha',
+        aab: '../build/app/outputs/bundle/release/app-release.aab',
+        json_key: '/Users/hirasalim/AndroidStudioProjects/pc-api-7972865370940927060-381-42125e02e8f7.json'
         )
       end
 
