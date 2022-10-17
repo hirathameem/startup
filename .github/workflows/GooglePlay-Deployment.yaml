@@ -1,8 +1,8 @@
-name: Create Release
+name: Deploy to Google Play
 on:
   push:
-    tags:
-      - V.1.1.0
+    branches:
+      - Deployment_Google_Play
 
 jobs:
   generate_release:
