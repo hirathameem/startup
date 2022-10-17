@@ -23,7 +23,7 @@ jobs:
 
   app_distribution_android:
     runs-on: ubuntu-latest
-    needs: tagged_release
+    needs: tagged-release
     defaults:
       run:
         working-directory: ./android
