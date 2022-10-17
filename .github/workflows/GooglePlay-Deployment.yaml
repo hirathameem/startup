@@ -1,13 +1,12 @@
-name: Deploy to Google Play
+name: Tagged Release
 on:
   push:
-    branches:
-      - Deployment_GooglePlay
+    tags:
+      - "v*"
 
 jobs:
-  generate_release:
-    outputs:
-      changelog: ${{ steps.build_release.outputs.changelog }}
+  tagged-release:
+    name: Tagged Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
