@@ -1,8 +1,10 @@
 name: Tagged Release
 on:
   push:
+    branches:
+      - Pre-Release
     tags:
-      - "v*"
+      - v1.*
 
 jobs:
   tagged-release:
