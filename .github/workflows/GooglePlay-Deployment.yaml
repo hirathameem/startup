@@ -2,7 +2,7 @@ name: Deploy to Google Play
 on:
   push:
     branches:
-      - Deployment_Google_Play
+      - Deployment_GooglePlay
 
 jobs:
   generate_release:
