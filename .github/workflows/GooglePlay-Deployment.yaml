@@ -8,21 +8,16 @@ jobs:
   tagged-release:
     name: Tagged Release
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Build & Test
+        run: |
+          echo "done!"
+      - uses: marvinpinto/action-automatic-release@latest
         with:
-          fetch-depth: 0
-      - name: Build Changelog
-        id: build_release
-        uses: mikepenz/release-changelog-builder-action@v3
-        with:
-          configuration: ".github/configs/configuration.json"
-          repo: "startup"
-          fromTag: "v1.0.2"
-          toTag: "main"
-          includeOpen: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+          repo_token: ${{ secrets.G_TOKEN }}
+          prerelease: false
+
 
   app_distribution_android:
     runs-on: ubuntu-latest
