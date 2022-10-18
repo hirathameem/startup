@@ -2,7 +2,7 @@ name: Deploy to Google
 on:
   push:
     branches:
-      Release_Job
+      Release_Jobs
 
 jobs:
   generate_release:
