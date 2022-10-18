@@ -1,8 +1,8 @@
 name: Deploy to Google
 on:
   push:
-   branches:
-      - 'Pre-Release'
+   tags:
+      - 'v1.1.2'
 
 jobs:
   generate_release:
