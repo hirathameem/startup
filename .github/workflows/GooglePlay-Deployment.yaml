@@ -1,6 +1,6 @@
 name: Deploy to Google
 on:
-#  push:
+  push:
 #    branches:
 #      -
 #    tags:
