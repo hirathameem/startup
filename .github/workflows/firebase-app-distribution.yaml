@@ -2,7 +2,7 @@ name: Publish to firebase app distribution
 on:
   push:
     branches:
-      - Fix_Release_Notes
+      - Job_Twelve
 
 jobs:
   generate_release:
