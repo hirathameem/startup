@@ -1,15 +1,15 @@
 name: Deploy to Google
 on:
-  push:
+#  push:
 #    branches:
 #      -
 #    tags:
 #      - v*
-  release:
-    types: [created]
+#  release:
+#    types: [created]
 
-#    branches:
-#      - Job_Ten
+    branches:
+      - Job_Twelve
 
 
 #  release:
@@ -32,7 +32,7 @@ jobs:
           configuration: ".github/configs/configuration.json"
           repo: "startup"
           fromTag: "v1.1.0"
-          toTag: "main"
+          toTag: "Job_Twelve"
           includeOpen: false
         env:
           GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
