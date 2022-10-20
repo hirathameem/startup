@@ -26,7 +26,7 @@ platform :android do
           package_name: 'com.nathira.startup',
           track: 'internal',
           aab: '../build/app/outputs/bundle/release/app-release.aab',
-          json_key: ${{ secrets.API_PLAY_STORE_KEY }
+          json_key: "api-play-store-key.json"
           )
         end
   end
